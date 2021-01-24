@@ -13,21 +13,21 @@ class Directory extends React.Component {
           imageUrl:
             "https://images.pexels.com/photos/1878821/pexels-photo-1878821.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
           id: 1,
-          linkUrl: "shop/hats",
+          linkUrl: "hats",
         },
         {
           title: "Jackets",
           imageUrl:
             "https://images.pexels.com/photos/6044143/pexels-photo-6044143.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
           id: 2,
-          linkUrl: "shop/jackets",
+          linkUrl: "jackets",
         },
         {
           title: "Sneakers",
           imageUrl:
             "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
           id: 3,
-          linkUrl: "shop/sneakers",
+          linkUrl: "sneakers",
         },
         {
           title: "Womens",
@@ -35,7 +35,7 @@ class Directory extends React.Component {
             "https://images.pexels.com/photos/4946659/pexels-photo-4946659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
           size: "large",
           id: 4,
-          linkUrl: "shop/womens",
+          linkUrl: "womens",
         },
         {
           title: "Mens",
@@ -43,7 +43,7 @@ class Directory extends React.Component {
             "https://images.pexels.com/photos/2897531/pexels-photo-2897531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
           size: "large",
           id: 5,
-          linkUrl: "shop/mens",
+          linkUrl: "mens",
         },
       ],
     };
@@ -52,8 +52,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.section.map(({ title, imageUrl, id, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        {this.state.section.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
