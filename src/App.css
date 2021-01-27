@@ -1,4 +1,10 @@
 body {
   font-family: "Yanone Kaffeesatz";
+  font-size: 1.5rem;
   padding: 20px 60px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
